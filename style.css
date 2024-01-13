@@ -1,0 +1,384 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("image/bg.jpg");
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#wrapper {
+    margin: 100px auto;
+    width: 1200px;
+    height: 900px;
+    /*background-image: url("image/pokestop.jpg");*/
+    background-color: antiquewhite;
+    border: 2px solid antiquewhite;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#wrapper .title {
+    margin: 0 auto;
+}
+
+#wrapper .title h2 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    color: #f2b51c;
+    text-transform: uppercase;
+}
+
+#wrapper .title .score {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: none;
+}
+
+#wrapper .title .info_content {
+    display: none;
+    margin-bottom: 20px;
+}
+
+#wrapper .title .info_content .level {
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#wrapper .title .info_content .shuffle {
+    margin-left: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#introFrame {
+    width: 800px;
+    height: 800px;
+    background-image: url("image/poke.jpg");
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin: 50px auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#end_game {
+    width: 1000px;
+    height: 800px;
+    background-image: url("image/endBackground.jpg");
+    -webkit-background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    margin: 50px auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#end_game .end_option {
+    margin: 150px auto;
+    background: antiquewhite;
+    border: 3px solid #9ad59f;
+    border-radius: 10px;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+#end_game .end_option h2 {
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#end_game .end_option h4 {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#end_game .end_option button {
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 6px;
+    background: #4faf3e;
+    text-transform: uppercase;
+    color: antiquewhite;
+}
+
+#end_game .end_option button:hover {
+    opacity: 0.7;
+}
+
+#end_game .end_option button i {
+    margin-top: -5px;
+    margin-right: 5px;
+}
+
+#introFrame .content {
+    margin: 230px auto;
+    background: antiquewhite;
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.content input {
+    width: 250px;
+    height: 30px;
+    margin: 20px auto;
+}
+
+#introFrame .content label {
+    margin: 15px auto;
+    width: 180px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#introFrame .content select {
+    width: 120px;
+    height: 30px;
+    margin: 20px auto;
+}
+
+#introFrame .content select option {
+    text-align: center;
+}
+
+#introFrame .content button {
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 6px;
+    background: #4faf3e;
+    color: antiquewhite;
+}
+
+#introFrame .content button:hover {
+    opacity: 0.7;
+}
+
+#introFrame .content button i {
+    margin-top: -5px;
+    margin-right: 8px;
+}
+
+#gameFrame {
+    width: 600px;
+    height: 600px;
+    background-color: #9ad59f;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.timer_wrapper {
+    width: 303px;
+    height: 24px;
+    margin-top: 50px;
+    margin-left: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.timer {
+    width: 300px;
+    height: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right, red, yellow, green);
+}
+
+.time_out {
+    display: flex;
+    text-align: center;
+    width: 600px;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+    color: #ff4a4a;
+    font-size: 65px;
+    background-color: antiquewhite;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: absolute;
+    opacity: 0.7;
+}
+
+.pause {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-left: 360px;
+    background: #9ad59f;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.restart {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    margin-top: 35px;
+    margin-left: 15px;
+    background: #9ad59f;
+    text-align: center;
+    border-radius: 10px;
+}
+
+i {
+    margin-top: 10px;
+}
+
+.pause_label {
+    margin-left: 365px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.restart_label {
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.timer_label {
+    margin-left: 120px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.countDown {
+    display: none;
+}
+.number {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 50px;
+}
+.lable {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 40px;
+}
+.labelMinutes {
+    margin-right: 30px;
+}
+@media only screen and (min-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100vw !important;
+    }
+    #wrapper .title .score {
+        font-size: 40px !important;
+    }
+    #wrapper .title .info_content .shuffle {
+        font-size: 30px !important;
+    }
+    #wrapper .title .info_content .level {
+        font-size: 30px !important;
+    }
+    #wrapper {
+        height: 100vh !important;
+        width: 108vw !important;
+    }
+    #gameFrame {
+        width: 103vw !important;
+        height: 60vh !important;
+    }
+    .cell {
+        width: 85px !important;
+        height: 85px !important;
+        position: absolute;
+        cursor: pointer;
+        border: 1px solid black;
+    }
+    .pause {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 60px;
+        margin-top: 35px;
+        margin-left: 238px !important;
+        background: #9ad59f;
+        text-align: center;
+        border-radius: 20px !important;
+    }
+    .restart {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: 100px !important;
+        height: 100px !important;
+        font-size: 60px;
+        margin-top: 35px;
+        margin-left: 20px;
+        background: #9ad59f;
+        text-align: center;
+        border-radius: 20px !important;
+    }
+    .pause_label {
+        font-size: 30px;
+        margin-left: 244px !important;
+        margin-top: 20px;
+    }
+    .restart_label {
+        font-size: 30px;
+        margin-left: 60px !important;
+        margin-top: 20px;
+    }
+    .timer_label {
+        font-size: 30px;
+        margin-left: 220px !important;
+        margin-top: 20px;
+    }
+    .time_out {
+        width: 103vw !important;
+        height: 55vh !important;
+    }
+    .timer_wrapper {
+        width: 553px !important;
+        margin-top: 72px !important;
+    }
+}

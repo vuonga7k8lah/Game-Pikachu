@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pikachu Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e7498fd49d.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--title display-->
+        <div class="title">
+            <h2>Pikachu</h2>
+            <div id="score" class="score">
+                Score: <span id="score_title">0</span>
+            </div>
+            <div id="content" class="info_content">
+                <div id="level" class="level">Level: <span id="level_index">0</span></div>
+                <div id="shuffle" class="shuffle">Shuffle times: <span id="shuffle_index" class="shuffle_index"></span>
+                </div>
+
+            </div>
+            <div id="countdownDiv" class="countDown" style="color: red;font-size: 30px;">
+                <div class="number">
+                    <div class="minutes" id="minutes"></div>-
+                    <div class="seconds" id="seconds"></div>
+                </div>
+                <div class="lable">
+                    <div class="labelMinutes">Minutes</div>
+                    <div class="labelSeconds">Seconds</div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--intro frame -->
+        <div id="introFrame" style="display: block;">
+            <div class="content">
+                <label for="levels">Choose level:</label>
+                <select name="levels_name" id="levels">
+                    <option value="easy" selected>Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="Extreme">Extreme</option>
+                    <option value="Terrible">Terrible</option>
+                    <option value="Nightmare">Nightmare</option>
+                </select>
+                <label for="levels">Choose Timer:</label>
+                <input name="dateTimes" class="level" id="dateTimes" type="number"
+                    placeholder="số giây để hoàn thành trò chơi">
+                <button id="startButton"><i class="fa-solid fa-play"></i>Play</button>
+            </div>
+        </div>
+        <!--main game frame-->
+        <div id="gameFrame" style="display: none;"></div>
+
+        <!--end game frame-->
+        <div id="end_game" style="display: none;">
+            <div class="end_option">
+                <h2>Congratulations!</h2>
+                <h4>Score: <span id="score_end"></span></h4>
+                <button id="tryAgain" style="display: none"><i class="fa-sharp fa-solid fa-arrow-rotate-left"></i>Try
+                    again</button>
+                <button id="backToMenu"><i class="fa-solid fa-bars"></i>Back to menu</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="pikachu.js"></script>
+</body>
+
+</html>
